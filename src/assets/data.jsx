@@ -24,7 +24,7 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    img: "../Images/image1.png",
+    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
     title: "Full Stack Web Blog",
@@ -42,7 +42,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: "/assets/image1.png",
+    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
     title: "Full Stack Web Blog",
@@ -51,7 +51,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: "/assets/image1.png",
+    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
     title: "Full Stack Web Blog",
@@ -66,25 +66,22 @@ export const jobs = [
     company: "Sparklehaze | Singapore (Remote)",
     title: "Front-end Developer & Data Analyst Intern",
     time: "November 2023 - Present",
-    text1:
+    texts: [
       "Utilized Typescript, HTML/CSS and Angular to design, develop and debug a user-friendly, adaptive, and responsive website for customers in hospital industry.",
-    text2:
       "Developed UI (user interface) for both client-site and administrative interfaces of Sparklehaze website.",
-    text3:
       "Implemented effective SEO (Search Engine Optimization) best practices and techniques to enhance website content and visibility.",
-    text4:
       "Analyzed data to help back-end team developed APIs for web application, improving functionality and user experience.",
+    ],
   },
   {
     id: nanoid(),
     company: "AsureQuality Ltd",
     title: "Microbiology Lab Technician",
     time: "2019 - July 2023",
-    text1:
+    texts: [
       "Conducted daily microbiological tests on water and environmental samples for government and private sector clients, ensuring precision and accuracy.",
-    text2:
       "Compiled, analyzed, and reported results to supervisor and scientific team in compliance with rules.",
-    text3:
       "Managed PC2 lab environment and conducted contamination investigations when necessary.",
+    ],
   },
 ];
