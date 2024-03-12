@@ -1,11 +1,18 @@
-import React from 'react'
 
-const SectionTitle = ({text}) => {
+
+const SectionTitle = ({ text, isFirst }) => {
+  const textTitle = text.endsWith("Projects");
   return (
-    <div className="mx-auto max-w-7xl pl-32 pr-28">
-      <h2 className="divider divider-start text-6xl font-bold">{text} <span>.</span></h2>
+    <div className={`mx-auto max-w-7xl pl-32 pr-28 ${isFirst ? "" : "mt-40"}`}>
+      <h2
+        className={`divider ${
+          textTitle ? "divider-end" : "divider-start"
+        } text-6xl font-bold`}
+      >
+        {text} <span>.</span>
+      </h2>
     </div>
   );
-}
+};
 
-export default SectionTitle
+export default SectionTitle;

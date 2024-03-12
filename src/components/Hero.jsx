@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+
 
 const Hero = () => {
   return (

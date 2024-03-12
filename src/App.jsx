@@ -1,21 +1,29 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Exp from './components/Exp'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import HomeLayout from './pages/HomeLayout'
+import Landing from './pages/Landing'
+import Resume from './components/Resume'
+import About from "./components/About"
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+    ],
+  },
+  {
+    path: "resume",
+    element: <Resume />,
+  },
+]);
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Exp />
-      <Projects />
-      <Contact />
-    </>
-  )
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App

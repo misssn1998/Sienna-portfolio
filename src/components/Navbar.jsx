@@ -1,4 +1,5 @@
 import { links } from "../assets/data";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,19 +8,25 @@ const Navbar = () => {
         <h2 className="text-3xl font-bold">
           Sienna <span className="text-emerald-600">Nguyen</span>
         </h2>
-        <div className="flex gap-x-10">
-          {links.map((link) => {
-            const { id, href, text } = link;
-            return (
-              <a
-                href={href}
-                key={id}
-                className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300"
-              >
-                {text}
-              </a>
-            );
-          })}
+        <div className="flex flex-cols-2 gap-x-10">
+          <ul className="flex gap-x-10">
+            {links.map((link) => {
+              const { id, href, text } = link;
+              return (
+                <li key={id}>
+                  <a
+                    href={href}
+                    className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300"
+                  >
+                    {text}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <button className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300">
+            <Link to='/resume'>Resume</Link>
+          </button>
         </div>
       </div>
     </nav>

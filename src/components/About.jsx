@@ -1,12 +1,12 @@
 import SectionTitle from "./SectionTitle";
 import Skills from "./Skills";
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   return (
     <section id="about">
       <div>
-        <SectionTitle text="About" />
+        <SectionTitle text="About" isFirst={true}/>
 
         {/* About me */}
         <div className="mx-auto max-w-7xl px-32 py-8 grid grid-cols-3">
