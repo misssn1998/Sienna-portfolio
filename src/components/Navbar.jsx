@@ -1,5 +1,4 @@
 import { links } from "../assets/data";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -24,8 +23,10 @@ const Navbar = () => {
               );
             })}
           </ul>
-          <button className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300">
-            <Link to='/resume'>Resume</Link>
+          <button
+            className="capitalize text-lg tracking-wide hover:text-emerald-600 duration-300"
+          >
+            Resume
           </button>
         </div>
       </div>
