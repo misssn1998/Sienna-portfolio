@@ -9,7 +9,7 @@ import React from "react";
 
 const Exp = () => {
   return (
-    <section id="exp">
+    <section id="exp" className="scroll-mt-44">
       <SectionTitle text="Experience" />
       <VerticalTimeline lineColor="" >
         {experiences.map((el) => {

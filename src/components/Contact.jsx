@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto max-7xl hero min-h-screen"
+      className="mx-auto max-7xl hero min-h-screen scroll-mt-6"
     >
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">

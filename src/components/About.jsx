@@ -4,7 +4,7 @@ import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="scroll-mt-56">
       <div>
         <SectionTitle text="About" isFirst={true}/>
 
