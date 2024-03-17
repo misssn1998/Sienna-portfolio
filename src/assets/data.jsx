@@ -1,4 +1,7 @@
 import { nanoid } from "nanoid";
+import { FaUniversity } from "react-icons/fa";
+import { MdWorkOutline } from "react-icons/md";
+import React from "react";
 
 export const links = [
   { id: nanoid(), href: "#about", text: "about" },
@@ -60,7 +63,7 @@ export const projects = [
   },
 ];
 
-export const jobs = [
+export const experiences = [
   {
     id: nanoid(),
     company: "Sparklehaze | Singapore (Remote)",
@@ -72,6 +75,7 @@ export const jobs = [
       "Implemented effective SEO (Search Engine Optimization) best practices and techniques to enhance website content and visibility.",
       "Analyzed data to help back-end team developed APIs for web application, improving functionality and user experience.",
     ],
+    icon: React.createElement(MdWorkOutline),
   },
   {
     id: nanoid(),
@@ -81,7 +85,24 @@ export const jobs = [
     texts: [
       "Conducted daily microbiological tests on water and environmental samples for government and private sector clients, ensuring precision and accuracy.",
       "Compiled, analyzed, and reported results to supervisor and scientific team in compliance with rules.",
+      "Collaborated within a large team to ensure timely delivery of successful results.",
       "Managed PC2 lab environment and conducted contamination investigations when necessary.",
     ],
+    icon: React.createElement(MdWorkOutline),
+  },
+  {
+    id: nanoid(),
+    title: "Master of Information Technology (MInfoTech)",
+    time: "2023-Present",
+    company: "Unversity of Auckland",
+    course: "Programming with web technology, Programming with Industry",
+    icon: React.createElement(FaUniversity),
+  },
+  {
+    id: nanoid(),
+    title: "Bachelor of Science - Biotechnology",
+    time: "2017-2020",
+    company: "Unversity of Auckland",
+    icon: React.createElement(FaUniversity),
   },
 ];
