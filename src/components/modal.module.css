@@ -1,0 +1,101 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000000;
+    height: 100vh;
+    padding: 4.8rem 1.2rem;
+    background: var(--bg-opaque);
+    backdrop-filter: blur(12px);
+
+    overflow-y: scroll;
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: var(--text);
+}
+
+.modalCard {
+    width: 100%;
+    max-width: 700px;
+    height: fit-content;
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    background: var(--background-light);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    ;
+
+    cursor: auto;
+}
+
+.modalImage {
+    width: 100%;
+}
+
+.modalContent {
+    padding: 2.4rem;
+
+    h4 {
+        font-size: 50px
+    }
+}
+
+.modalTech {
+    color: var(--brand);
+    margin: 8px 0 20px 0;
+}
+
+.suppliedContent {
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+.modalFooter {
+    margin-top: 20px;
+}
+
+.linksText {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    span {
+        color: var(--brand);
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-size: 18px;
+        color: var(--brand);
+    }
+}
+
+.closeModalBtn {
+    background: none;
+    border: none;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    cursor: pointer;
+}

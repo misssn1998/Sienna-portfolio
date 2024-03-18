@@ -5,7 +5,7 @@ const SectionTitle = ({ text, isFirst }) => {
   return (
     <div className={`mx-auto max-w-7xl pl-32 pr-28 ${isFirst ? "" : "mt-40"}`}>
       <h2
-        className={`divider ${
+        className={`divider mb-16 ${
           textTitle ? "divider-end" : "divider-start"
         } text-6xl font-bold`}
       >
