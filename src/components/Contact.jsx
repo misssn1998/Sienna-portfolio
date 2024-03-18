@@ -44,11 +44,11 @@ const Contact = () => {
           <h1 className="text-5xl font-bold">Get in touch!</h1>
           <p className="py-6 w-72">
             Shoot me an email if you want to connect! You can also find me on
-            <span className="text-emerald-500">
+            <span className="text-primary font-semibold">
               <a href="www.linkedin.com/in/sienna-nguyen-0828b4146"> Linkedin </a>
             </span>
              or
-            <span className="text-emerald-500">
+            <span className="text-primary font-semibold">
               <a href="https://github.com/misssn1998"> Github </a>
             </span>
              if that's more your speed.
@@ -104,7 +104,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="btn btn-sm mt-5 bg-emerald-500"
+            className="btn btn-sm mt-5 bg-primary"
             disabled={isLoading}
           >
             {isLoading ? "Sending..." : "Send Message"}

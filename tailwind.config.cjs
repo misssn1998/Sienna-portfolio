@@ -5,6 +5,7 @@ export default {
     extend: {},
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  "tailwindcss/nesting": 'postcss-nesting',
   daisyui: {
     themes: ["retro"],
   },

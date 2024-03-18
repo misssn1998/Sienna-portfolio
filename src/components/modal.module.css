@@ -41,9 +41,10 @@
 .modalContent {
     padding: 2.4rem;
 
-    h4 {
-        font-size: 50px
-    }
+}
+
+.modalContent h4 {
+    font-size: 50px
 }
 
 .modalTech {
@@ -64,25 +65,25 @@
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
+}
 
-    span {
-        color: var(--brand);
-    }
+.linksText span {
+    color: var(--brand);
 }
 
 .links {
     display: flex;
     align-items: center;
     gap: 25px;
+}
 
-    a {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-        font-size: 18px;
-        color: var(--brand);
-    }
+    font-size: 18px;
+    color: var(--brand);
 }
 
 .closeModalBtn {

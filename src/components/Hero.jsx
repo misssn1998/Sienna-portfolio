@@ -14,7 +14,7 @@ const Hero = () => {
           </h1>
           <p className="mt-7 text-4xl tracking-wide">
             I'm a{" "}
-            <span className="text-emerald-600 font-black">
+            <span className="text-primary font-black">
               Full Stack Developer
             </span>
           </p>

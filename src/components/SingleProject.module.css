@@ -11,13 +11,17 @@
     margin-top: 20px;
     width: 55%;
     margin-left: 440px;
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+    .projects {
         grid-template-columns: 1fr;
         margin-left: 180px;
     }
+}
 
-    @media (max-width: 1260px) {
+@media (max-width: 1260px) {
+    .projects {
         width: 70%;
         margin-left: 150px;
     }
@@ -31,18 +35,18 @@
     position: relative;
     border-radius: 0.8rem;
     overflow: hidden;
+}
 
-    img {
-        width: 85%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        translate: -50% 20%;
+.projectImage img {
+    width: 85%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 20%;
 
-        transition: 0.25s all;
+    transition: 0.25s all;
 
-        border-radius: 8px;
-    }
+    border-radius: 8px;
 }
 
 .projectCopy {
@@ -62,33 +66,32 @@
 .projectTitleLine {
     display: flex;
     gap: 8px;
-
-    a {
-        opacity: 0.75;
-        transition: 0.25s opacity;
-    }
-
-    a:hover {
-        opacity: 1;
-    }
 }
 
+.projectTitleLine a {
+    opacity: 0.75;
+    transition: 0.25s opacity;
+}
+
+.projectTitleLine a:hover {
+    opacity: 1;
+}
 
 .projectDescription {
     font-size: 18px;
+}
 
-    span {
-        display: inline-block;
+.projectDescription span {
+    display: inline-block;
 
-        font-weight: 400;
-        color: palevioletred;
+    font-weight: 400;
+    color: palevioletred;
 
-        cursor: pointer;
-    }
+    cursor: pointer;
+}
 
-    span:hover {
-        text-decoration: underline;
-    }
+.projectDescription span:hover {
+    text-decoration: underline;
 }
 
 .projectTech {
