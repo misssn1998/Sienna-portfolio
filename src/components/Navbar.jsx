@@ -2,10 +2,10 @@ import { links } from "../assets/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [activeSession, setActiveSession] = useState("home");
+
   return (
     <header className="z-[999] relative">
       <motion.div

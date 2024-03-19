@@ -1,7 +1,7 @@
 import SectionTitle from "./SectionTitle";
 import Skills from "./Skills";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 
 const About = () => {
   return (
@@ -77,7 +77,7 @@ const About = () => {
                   d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
                 />
               </svg>
-              <span className="text-xl font-bold">My Skills</span>
+              <span className="text-xl font-bold text-neutral">My Skills</span>
             </div>
             <Skills />
           </div>

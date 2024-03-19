@@ -9,6 +9,14 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
 
+  const getFirstSentence = (text) => {
+    const sentences = text.split(/[.!?]/);
+    const firstSentence = sentences.slice(0,2).join('. ')
+    return firstSentence.trim()
+  }
+
+  const firstSentence = getFirstSentence(text)
+
   return (
     <>
       <motion.div>
@@ -16,7 +24,7 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={() => setIsOpen(true)}
-          className={styles.projectImage}
+          className={id === 1 ? styles.project1 : styles.projectImage}
         >
           <img
             src={img}
@@ -43,7 +51,7 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
 
         <div className={styles.projectTech}>{tech}</div>
         <p className={styles.projectDescription}>
-          {text} <span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
+          {firstSentence} <span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
         </p>
       </motion.div>
       <Modal image={img} title={title} git={github} tech={tech} text={text} isOpen={isOpen} setIsOpen={setIsOpen}/>

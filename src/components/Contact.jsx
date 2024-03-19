@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import SectionTitle from "./SectionTitle";
+import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
   const nameRef = useRef(null);
@@ -22,9 +22,9 @@ const Contact = () => {
     try {
       setIsLoading(true);
       await emailjs.send(serviceId, templateId, {
-       name: nameRef.current.value,
+        name: nameRef.current.value,
         email: emailRef.current.value,
-        message: messageRef.current.value
+        message: messageRef.current.value,
       });
       alert("Email successfully sent check inbox");
     } catch (error) {
@@ -37,80 +37,84 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto max-7xl hero min-h-screen scroll-mt-6"
+      className="mx-auto max-w-7xl grid grid-cols-3 px-32 py-8 mt-20 scroll-mt-6"
     >
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Get in touch!</h1>
-          <p className="py-6 w-72">
+      <div className="col-span-2">
+        <div className="text-center lg:text-left leading-9">
+          <h1 className="text-5xl font-bold mb-10 text-heading-text">
+            Get in touch!
+          </h1>
+          <p className="pr-20 text-xl leading-10">
             Shoot me an email if you want to connect! You can also find me on
             <span className="text-primary font-semibold">
-              <a href="www.linkedin.com/in/sienna-nguyen-0828b4146"> Linkedin </a>
+              <a href="https://www.linkedin.com/in/sienna-nguyen-0828b4146/">
+                {" "}
+                Linkedin{" "}
+              </a>
             </span>
-             or
+            or
             <span className="text-primary font-semibold">
               <a href="https://github.com/misssn1998"> Github </a>
             </span>
-             if that's more your speed.
+            if that's more your speed🤩🫶👩💻.{" "}
           </p>
         </div>
-        <form
-          className="mx-auto max-w-38 flex flex-col"
-          onSubmit={handleSubmit}
-        >
-          {/* NAME */}
-          <div className="gap-2 flex flex-col w-64 mb-8">
-            <label className="font-semibold mr-6">Name</label>
-            <input
-              type="text"
-              name="name"
-              ref={nameRef}
-              className="input input-bordered"
-              placeholder="John"
-              required
-              value={form.name}
-              onChange={handleChange}
-            />
-          </div>
-
-          {/* EMAIL */}
-          <div className="gap-2 flex flex-col w-64 mb-8">
-            <label className="font-semibold mr-6">Email</label>
-            <input
-              type="email"
-              name="email"
-              ref={emailRef}
-              className="input input-bordered"
-              placeholder="John@email.com"
-              required
-              value={form.email}
-              onChange={handleChange}
-            />
-          </div>
-
-          {/* MESSAGE */}
-          <div className="gap-2 flex flex-col w-64">
-            <label className="font-semibold mr-6">Your Message</label>
-            <textarea
-              name="message"
-              className="textarea textarea-bordered textarea-lg w-full max-w-xs"
-              placeholder="Hi Sienna,...."
-              ref={messageRef}
-              required
-              value={form.message}
-              onChange={handleChange}
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="btn btn-sm mt-5 bg-primary"
-            disabled={isLoading}
-          >
-            {isLoading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
       </div>
+
+      <form className="col-span-1 flex flex-col" onSubmit={handleSubmit}>
+        {/* NAME */}
+        <div className="gap-2 flex flex-col w-full mb-8">
+          <label className="font-semibold mr-6">Name</label>
+          <input
+            type="text"
+            name="name"
+            ref={nameRef}
+            className="input input-bordered border-heading-text"
+            placeholder="John"
+            required
+            value={form.name}
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* EMAIL */}
+        <div className="gap-2 flex flex-col w-full mb-8">
+          <label className="font-semibold mr-6">Email</label>
+          <input
+            type="email"
+            name="email"
+            ref={emailRef}
+            className="input input-bordered border-heading-text"
+            placeholder="John@email.com"
+            required
+            value={form.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* MESSAGE */}
+        <div className="gap-2 flex flex-col w-full">
+          <label className="font-semibold mr-6">Your Message</label>
+          <textarea
+            name="message"
+            className="textarea textarea-bordered border-heading-text textarea-lg"
+            placeholder="Hi Sienna,...."
+            ref={messageRef}
+            required
+            value={form.message}
+            onChange={handleChange}
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="btn btn-sm mt-5 bg-secondary shadow-lg hover:scale-110"
+          disabled={isLoading}
+        >
+          {isLoading ? "Sending..." : "Send Message"}
+          <FiSend />
+        </button>
+      </form>
     </section>
   );
 };

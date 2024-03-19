@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 import { FaUniversity } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
 import React from "react";
+import img1 from "../assets/blog.png"
 
 export const links = [
   { id: nanoid(), href: "/", text: "home" },
@@ -27,7 +28,16 @@ export const skills = [
 
 export const projects = [
   {
-    id: nanoid(),
+    id: 1,
+    img: img1,
+    url: "https://full-stack-blog-f6yb.onrender.com",
+    github: "",
+    title: "Full Stack Web Blog",
+    text: "User-friendly, secure, and interactive. Features include user registration and authentication, article comments, likes, and subscriptions. WYSIWYG editor for content control. User autonomy over personal information. Analytics for insights into user-generated content. Primary reviewer for PRs and merge conflicts.",
+    tech: "HTML - CSS - ExpressJs - NodeJs - UUID - AJAX - API - SQL - Handlebars - VanillaJs",
+  },
+  {
+    id: 2,
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
@@ -36,7 +46,7 @@ export const projects = [
     tech: "React - React - React - React",
   },
   {
-    id: nanoid(),
+    id: 3,
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
@@ -45,16 +55,7 @@ export const projects = [
     tech: "React - React - React - React",
   },
   {
-    id: nanoid(),
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://full-stack-blog-f6yb.onrender.com/",
-    github: "",
-    title: "Full Stack Web Blog",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
-    tech: "React - React - React - React",
-  },
-  {
-    id: nanoid(),
+    id: 4,
     img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
     url: "https://full-stack-blog-f6yb.onrender.com/",
     github: "",
@@ -96,7 +97,7 @@ export const experiences = [
     title: "Master of Information Technology (MInfoTech)",
     time: "2023-Present",
     company: "Unversity of Auckland",
-    course: "Programming with web technology, Programming with Industry",
+    course: "Programming with web technology (A+), Programming with Industry (A-)",
     icon: React.createElement(FaUniversity),
   },
   {

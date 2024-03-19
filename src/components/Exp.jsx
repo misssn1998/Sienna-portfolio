@@ -13,11 +13,11 @@ const Exp = () => {
       <SectionTitle text="Experience" />
       <VerticalTimeline lineColor="" >
         {experiences.map((el) => {
-          const { id, company, title, time, texts, icon } = el;
+          const { id, company, title, time, texts, icon, course } = el;
           return (
             <React.Fragment key={id}>
               <VerticalTimelineElement
-                className="text-black"
+                className="text-black max-w-7xl mx-auto"
                 contentStyle={{
                   backgroundColor: "#f3f4f6",
                   boxShadow: "none",
@@ -27,21 +27,29 @@ const Exp = () => {
                   borderRadius: "10px",
                 }}
                 contentArrowStyle={{
-                  borderRight: "0.4rem solid #9ca3af",
+                  borderRight: "0.4rem solid #F09A95",
                 }}
                 date={time}
                 icon={icon}
                 iconStyle={{
-                  background: "white",
+                  background: "#ECE3CB",
                   fontSize: "1.5rem",
+                  color: "#3d4451",
                 }}
               >
-                <h3 className="text-lg font-bold">{title}</h3>
-                <p className="font-normal !mt-0">{company}</p>
+                <h3 className="text-lg font-bold text-neutral">{title}</h3>
+                <p className="font-normal !mt-0 text-neutral">{company}</p>
+                {course ? (
+                  <ul className="list-disc pl-10 leading-loose !font-normal text-gray-700 !mt-1">
+                    <li>{course}</li>
+                  </ul>
+                ) : (
+                  ""
+                )}
                 <ul className="list-disc leading-loose pl-10 !mt-1 !font-normal text-gray-700">
-                  {texts? (texts.map((text, index) => (
-                    <li key={index}>{text}</li>
-                  ))) : ''}
+                  {texts
+                    ? texts.map((text, index) => <li key={index}>{text}</li>)
+                    : ""}
                 </ul>
               </VerticalTimelineElement>
             </React.Fragment>

@@ -26,7 +26,7 @@ const Hero = () => {
       {/* Hero span */}
       <div className="col-span-2 pr-20 ">
         <article>
-          <h1 className="text-7xl font-semibold tracking-wider leading-normal">
+          <h1 className="text-7xl font-semibold tracking-wider leading-normal text-neutral">
             Hey, I'm Sienna
             <span>.</span>
           </h1>
@@ -61,9 +61,7 @@ const Hero = () => {
             </button>
             <button
               className="btn btn-sm btn-secondary rounded-3xl mt-6 ml-5"
-              onClick={() => {
-                handleDownload(RESUME_PDF);
-              }}
+              onClick={handleDownload}
             >
               Download CV
               <MdOutlineFileDownload className="text-xl"/>
