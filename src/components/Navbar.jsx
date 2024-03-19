@@ -2,9 +2,10 @@ import { links } from "../assets/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [activeSession, setActiveSession] = useState("about");
+  const [activeSession, setActiveSession] = useState("home");
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -27,7 +28,7 @@ const Navbar = () => {
                   href={href}
                   className={clsx(
                     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition capitalize ",
-                    { "text-gray-950": activeSession === text }
+                    { "text-gray-950": activeSession === text}
                   )}
                   onClick={() => setActiveSession(text)}
                 >

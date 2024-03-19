@@ -4,6 +4,7 @@ import { MdWorkOutline } from "react-icons/md";
 import React from "react";
 
 export const links = [
+  { id: nanoid(), href: "/", text: "home" },
   { id: nanoid(), href: "#about", text: "about" },
   { id: nanoid(), href: "#projects", text: "projects" },
   { id: nanoid(), href: "#exp", text: "experience" },
