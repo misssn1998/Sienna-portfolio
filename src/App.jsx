@@ -1,8 +1,5 @@
 import HomeLayout from './pages/HomeLayout'
 import Landing from './pages/Landing'
-import Resume from './components/Resume'
-import About from "./components/About"
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -15,10 +12,6 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
     ],
-  },
-  {
-    path: "resume",
-    element: <Resume />,
   },
 ]);
 

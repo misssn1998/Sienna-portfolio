@@ -1,20 +1,36 @@
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import avatar from "../assets/memoji.png";
+import styles from "./Hero.module.css"
+import { MdOutlineFileDownload } from "react-icons/md";
+
+const RESUME_PDF = "http://127.0.0.1:5173/Sienna_Tech_CV.pdf";
 
 const Hero = () => {
   const handleScroll = () => {
     const section = document.getElementById("contact");
     section.scrollIntoView({ smooth: true, duration: 500, block: "center" });
   };
+
+  const handleDownload = (url) => {
+    const fileName = url.split('/').pop();
+    const aTag = document.createElement('a');
+    aTag.href = url;
+    aTag.setAttribute('download', fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  }
+
   return (
-    <div className="py-32">
-      <div className="mx-auto max-w-7xl pl-32 pr-96">
+    <div className="mx-auto max-w-7xl mt-10 px-32 py-32 grid grid-cols-3  justify-center items-center">
+      {/* Hero span */}
+      <div className="col-span-2 pr-20 ">
         <article>
-          <h1 className="text-7xl font-semibold tracking-wider">
+          <h1 className="text-7xl font-semibold tracking-wider leading-normal">
             Hey, I'm Sienna
             <span>.</span>
           </h1>
-          <span className="mt-7 text-4xl tracking-wide">
+          <span className="mt-7 text-4xl tracking-wide leading-normal">
             I'm a{" "}
             <TypeAnimation
               sequence={[
@@ -26,23 +42,39 @@ const Hero = () => {
                 2000,
               ]}
               speed={50}
-              className="text-rose-500 font-semibold
-              "
+              className="font-semibold bg-gradient-to-r from-rose-500 to-cyan-500 bg-clip-text text-transparent "
               wrapper="span"
               repeat={Infinity}
             />
           </span>
           <p className="mt-3 text-lg tracking-wide">
             I'm switching from a career of microbiologist to a developer. I
-            enjoy coding and analyse data <br /> to create meaningful projects.
+            enjoy coding and analyse data to create meaningful projects. <br />
             Let's connect!
           </p>
           <div>
-            <button className="btn btn-primary mt-6" onClick={handleScroll}>
+            <button
+              className="btn btn-primary btn-sm rounded-3xl mt-6"
+              onClick={handleScroll}
+            >
               Contact Me
+            </button>
+            <button
+              className="btn btn-sm btn-secondary rounded-3xl mt-6 ml-5"
+              onClick={() => {
+                handleDownload(RESUME_PDF);
+              }}
+            >
+              Download CV
+              <MdOutlineFileDownload className="text-xl"/>
             </button>
           </div>
         </article>
+      </div>
+
+      {/* AVATAR */}
+      <div className="w-80">
+        <img src={avatar} alt="My avatar" className={styles.image} />
       </div>
     </div>
   );

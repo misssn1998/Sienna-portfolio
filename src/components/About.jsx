@@ -1,15 +1,16 @@
 import SectionTitle from "./SectionTitle";
 import Skills from "./Skills";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <section id="about" className="scroll-mt-56">
       <div>
-        <SectionTitle text="About" isFirst={true}/>
+        <SectionTitle text="About" isFirst={true} />
 
         {/* About me */}
-        <div className="mx-auto max-w-7xl px-32 py-8 grid grid-cols-3">
+        <div className="mx-auto max-w-7xl px-32 grid grid-cols-3">
           <div className="space-y-8 col-span-2">
             <p>
               Hey! I'm Sienna, if you haven't already gathered that by now. I'm
@@ -49,11 +50,11 @@ const About = () => {
                 </svg>
               </div>
               <div className="flex flex-cols-2 items-center gap-2">
-                <a href="#">
-                  <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+                <a href="https://github.com/misssn1998">
+                  <FaGithubSquare className="h-8 w-8 text-secondary hover:text-emerald-600 duration-300" />
                 </a>
-                <a href="#">
-                  <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+                <a href="https://www.linkedin.com/in/sienna-nguyen-0828b4146/">
+                  <FaLinkedin className="h-8 w-8 text-secondary hover:text-emerald-600  duration-300" />
                 </a>
               </div>
             </div>
