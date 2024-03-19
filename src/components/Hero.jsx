@@ -22,11 +22,11 @@ const Hero = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl mt-10 px-32 py-32 grid grid-cols-3  justify-center items-center">
+    <div className="mx-auto max-w-7xl mt-10 px-32 py-32 grid grid-cols-3 justify-center items-center sm:grid-cols-3 xs:px-6 xs:flex ">
       {/* Hero span */}
-      <div className="col-span-2 pr-20 ">
+      <div className="col-span-2 pr-20 xs:pr-0">
         <article>
-          <h1 className="text-7xl font-semibold tracking-wider leading-normal text-neutral">
+          <h1 className="text-7xl font-semibold tracking-wider leading-normal text-neutral sm:text-5xl sm:tracking-normal xs:tracking-tight xs:text-4xl ">
             Hey, I'm Sienna
             <span>.</span>
           </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
             enjoy coding and analyse data to create meaningful projects. <br />
             Let's connect!
           </p>
-          <div>
+          <div className="flex sm:flex-col sm:w-44">
             <button
               className="btn btn-primary btn-sm rounded-3xl mt-6"
               onClick={handleScroll}
@@ -60,8 +60,8 @@ const Hero = () => {
               Contact Me
             </button>
             <button
-              className="btn btn-sm btn-secondary rounded-3xl mt-6 ml-5"
-              onClick={handleDownload}
+              className="flex btn btn-sm btn-secondary rounded-3xl mt-6 ml-5 sm:ml-0"
+              onClick={() => handleDownload(RESUME_PDF)}
             >
               Download CV
               <MdOutlineFileDownload className="text-xl"/>
@@ -71,7 +71,7 @@ const Hero = () => {
       </div>
 
       {/* AVATAR */}
-      <div className="w-80">
+      <div className="w-80 hidden md:block lg:block">
         <img src={avatar} alt="My avatar" className={styles.image} />
       </div>
     </div>

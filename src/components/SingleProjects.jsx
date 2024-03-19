@@ -24,7 +24,7 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={() => setIsOpen(true)}
-          className={id === 1 ? styles.project1 : styles.projectImage}
+          className={id === 1 ? styles.project1 : (id === 2 ? styles.project2 : styles.projectImage)}
         >
           <img
             src={img}
@@ -39,13 +39,13 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
         <div className={styles.projectCopy}>
           <h4 className={styles.projectTitle}>{title}</h4>
           <div className={styles.projectTitleLine}>
-            <Link href={github} target="_blank">
+            <a href={github} target="_blank">
               <AiFillGithub size="2.2rem" />
-            </Link>
+            </a>
 
-            <Link href={url} target="_blank">
+            <a href={url} target="_blank">
               <AiOutlineExport size="2.2rem" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
           {firstSentence} <span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
         </p>
       </motion.div>
-      <Modal image={img} title={title} git={github} tech={tech} text={text} isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <Modal image={img} title={title} git={github} tech={tech} text={text} isOpen={isOpen} setIsOpen={setIsOpen} url={url}/>
     </>
   );
 };

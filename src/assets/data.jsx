@@ -3,6 +3,7 @@ import { FaUniversity } from "react-icons/fa";
 import { MdWorkOutline } from "react-icons/md";
 import React from "react";
 import img1 from "../assets/blog.png"
+import img2 from "../assets/pokemon.png"
 
 export const links = [
   { id: nanoid(), href: "/", text: "home" },
@@ -31,37 +32,19 @@ export const projects = [
     id: 1,
     img: img1,
     url: "https://full-stack-blog-f6yb.onrender.com",
-    github: "",
-    title: "Full Stack Web Blog",
+    github: "https://github.com/misssn1998/g2-full-stack-blog-web.git",
+    title: "G2 Full Stack Web Blog",
     text: "User-friendly, secure, and interactive. Features include user registration and authentication, article comments, likes, and subscriptions. WYSIWYG editor for content control. User autonomy over personal information. Analytics for insights into user-generated content. Primary reviewer for PRs and merge conflicts.",
     tech: "HTML - CSS - ExpressJs - NodeJs - UUID - AJAX - API - SQL - Handlebars - VanillaJs",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://full-stack-blog-f6yb.onrender.com/",
-    github: "",
-    title: "Full Stack Web Blog",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
-    tech: "React - React - React - React",
-  },
-  {
-    id: 3,
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://full-stack-blog-f6yb.onrender.com/",
-    github: "",
-    title: "Full Stack Web Blog",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
-    tech: "React - React - React - React",
-  },
-  {
-    id: 4,
-    img: "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800",
-    url: "https://full-stack-blog-f6yb.onrender.com/",
-    github: "",
-    title: "Full Stack Web Blog",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
-    tech: "React - React - React - React",
+    img: img2,
+    url: "",
+    github: "https://github.com/misssn1998/pokemon-exploration-website",
+    title: "Pokemon Exploration Website",
+    text: "This web project is to create a single-page application that dynamically displays data about Pokémon. The application utilizes AJAX for dynamic loading of data from the server without refreshing the entire page. It aims to demonstrate proficiency in client-side and server-side JavaScript development while adhering to good coding practices and design principles.",
+    tech: "HTML - CSS - AJAX - JS - API - Local storage",
   },
 ];
 

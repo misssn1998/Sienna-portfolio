@@ -37,14 +37,15 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-7xl grid grid-cols-3 px-32 py-8 mt-20 scroll-mt-6"
+      className="mx-auto max-w-7xl grid grid-cols-3 px-32 py-8 mt-20 scroll-mt-6 sm:flex xs:grid-cols-1"
     >
-      <div className="col-span-2">
+      <div className="col-span-2 ">
         <div className="text-center lg:text-left leading-9">
           <h1 className="text-5xl font-bold mb-10 text-heading-text">
             Get in touch!
           </h1>
-          <p className="pr-20 text-xl leading-10">
+          <p className="pr-20 text-xl leading-10 sm:pr-8
+          xs:pr-0">
             Shoot me an email if you want to connect! You can also find me on
             <span className="text-primary font-semibold">
               <a href="https://www.linkedin.com/in/sienna-nguyen-0828b4146/">
@@ -61,7 +62,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <form className="col-span-1 flex flex-col" onSubmit={handleSubmit}>
+      <form className="col-span-1 flex flex-col xs:mt-10" onSubmit={handleSubmit}>
         {/* NAME */}
         <div className="gap-2 flex flex-col w-full mb-8">
           <label className="font-semibold mr-6">Name</label>

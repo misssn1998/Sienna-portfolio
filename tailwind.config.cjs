@@ -6,6 +6,9 @@ export default {
       colors: {
         "heading-text": "#2E282A",
       },
+      screens: {
+        'xs': '430px'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],

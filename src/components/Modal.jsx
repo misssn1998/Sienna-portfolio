@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Modal = ({ image, title, git, tech, text, isOpen, setIsOpen }) => {
+const Modal = ({ url, image, title, git, tech, text, isOpen, setIsOpen }) => {
   if (!isOpen) return null;
 
   useEffect(() => {
@@ -44,12 +44,12 @@ const Modal = ({ image, title, git, tech, text, isOpen, setIsOpen }) => {
               Project Links <span>.</span>
             </p>
             <div className={styles.links}>
-              <Link target="_blank" href={git}>
+              <a target="_blank" href={git}>
                 <AiFillGithub /> source code
-              </Link>
-              <Link target="_blank">
+              </a>
+              <a target="_blank" href={url}>
                 <AiOutlineExport /> live project
-              </Link>
+              </a>
             </div>
           </div>
         </div>

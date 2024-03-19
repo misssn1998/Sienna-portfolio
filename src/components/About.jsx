@@ -10,8 +10,8 @@ const About = () => {
         <SectionTitle text="About" isFirst={true} />
 
         {/* About me */}
-        <div className="mx-auto max-w-7xl px-32 grid grid-cols-3">
-          <div className="space-y-8 col-span-2">
+        <div className="mx-auto max-w-7xl px-32 grid grid-cols-3 sm:px-12 xs:px-8">
+          <div className="space-y-8 col-span-2 sm:pr-5 ">
             <p>
               Hey! I'm Sienna, if you haven't already gathered that by now. I'm
               a microbiologist turned software engineer and data analyst from
