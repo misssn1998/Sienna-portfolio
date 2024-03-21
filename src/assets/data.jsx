@@ -40,7 +40,6 @@ export const projects = [
   {
     id: 2,
     img: img2,
-    url: "",
     github: "https://github.com/misssn1998/pokemon-exploration-website",
     title: "Pokemon Exploration Website",
     text: "This web project is to create a single-page application that dynamically displays data about Pokémon. The application utilizes AJAX for dynamic loading of data from the server without refreshing the entire page. It aims to demonstrate proficiency in client-side and server-side JavaScript development while adhering to good coding practices and design principles.",

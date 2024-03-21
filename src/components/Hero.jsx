@@ -22,7 +22,7 @@ const Hero = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl mt-10 px-32 py-32 grid grid-cols-3 justify-center items-center sm:grid-cols-3 xs:px-6 xs:flex ">
+    <div className="mx-auto max-w-7xl mt-10 px-38 py-32 grid grid-cols-3 justify-center items-center sm:grid-cols-3 xs:px-6 xs:flex ">
       {/* Hero span */}
       <div className="col-span-2 pr-20 xs:pr-0">
         <article>
@@ -52,9 +52,9 @@ const Hero = () => {
             enjoy coding and analyse data to create meaningful projects. <br />
             Let's connect!
           </p>
-          <div className="flex sm:flex-col sm:w-44">
+          <div className="flex sm:flex-row xs:flex-row xs:w-44">
             <button
-              className="btn btn-primary btn-sm rounded-3xl mt-6"
+              className="btn btn-primary btn-sm rounded-3xl mt-6 mr-10"
               onClick={handleScroll}
             >
               Contact Me

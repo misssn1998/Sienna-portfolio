@@ -43,9 +43,9 @@ const SingleProjects = ({ id, url, img, title, github, text, tech }) => {
               <AiFillGithub size="2.2rem" />
             </a>
 
-            <a href={url} target="_blank">
+            {url ? (<a href={url} target="_blank">
               <AiOutlineExport size="2.2rem" />
-            </a>
+            </a>) : ""}
           </div>
         </div>
 

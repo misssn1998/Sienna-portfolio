@@ -47,9 +47,14 @@ const Modal = ({ url, image, title, git, tech, text, isOpen, setIsOpen }) => {
               <a target="_blank" href={git}>
                 <AiFillGithub /> source code
               </a>
-              <a target="_blank" href={url}>
-                <AiOutlineExport /> live project
-              </a>
+
+              {url ? (
+                <a target="_blank" href={url}>
+                  <AiOutlineExport /> live project
+                </a>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
